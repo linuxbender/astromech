@@ -4,3 +4,9 @@ obj
 
 # mstest test results
 TestResults
+
+/Presentation.Web/Content/.sass-cache
+/Presentation.Web/Content/bootstrap
+
+/Presentation.Web/Content/_bootstrap.scss
+/Presentation.Web/Content/_bootstrap-responsive.scss

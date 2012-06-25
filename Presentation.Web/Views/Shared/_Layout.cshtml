@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>@Html.AppTitle()</title>
+    
+    
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/astromech.css")" rel="stylesheet" /> 
+    <link href="@Url.Content("~/Content/bootstrap-responsive.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>  
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+    <script src="@Url.Content("~/Scripts/knockout-2.1.0.debug.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    
+    @Html.Partial("_html5shim")
+</head>
+<body>
+<section class="container bgwell well">
+    @Html.Partial("_header")
+    <section>
+        @RenderBody()
+    </section>
+    @Html.Partial("_footer")   
+</section>    
+</body>
+</html>
