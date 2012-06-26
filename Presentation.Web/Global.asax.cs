@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Presentation.Web
@@ -19,10 +14,17 @@ namespace Presentation.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            // short url for static pages
+            routes.MapRoute("Home", "", new { controller = "Home", action = "Index" });
+            routes.MapRoute("About","About",new { controller = "Home", action = "About" });
+            routes.MapRoute("Help", "Help", new { controller = "Home", action = "Help" });
+            routes.MapRoute("Contact", "Contact", new { controller = "Home", action = "Contact" });
+            routes.MapRoute("Github", "Github", new { controller = "Home", action = "Github" });
+            routes.MapRoute("SignIn", "SignIn", new { Area = "Account", Controller ="Login", Action ="SignIn"});
+            
+            // default mapping
+            routes.MapRoute("Default", "{controller}/{action}/{id}",
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
 

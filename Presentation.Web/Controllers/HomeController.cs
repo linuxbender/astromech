@@ -12,6 +12,30 @@ namespace Presentation.Web.Controllers
         public ActionResult Index()
         {
             return View();
-        }       
+        }
+
+        [HttpGet]
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Help()
+        {
+            return View(); 
+        }
+ 
+        [HttpGet]
+        public ActionResult Contact()
+        {
+            return View(); 
+        }
+
+        [HttpGet]
+        public RedirectResult Github()
+        {
+            return Redirect("https://github.com/linuxbender/astromech"); 
+        }
     }
 }
