@@ -5,8 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace Presentation.Web.Areas.Account.Controllers
-{    
-    [RequireHttps]    
+{      
     public class LoginController : Controller
     {
         //
