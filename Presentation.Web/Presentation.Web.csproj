@@ -64,7 +64,6 @@
   <ItemGroup>
     <Compile Include="Areas\Account\AccountAreaRegistration.cs" />
     <Compile Include="Areas\Account\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Default\DefaultAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -183,19 +182,10 @@
   <ItemGroup>
     <Folder Include="Areas\Account\Models\" />
     <Folder Include="Areas\Account\Views\Shared\" />
-    <Folder Include="Areas\Default\Controllers\" />
-    <Folder Include="Areas\Default\Models\" />
-    <Folder Include="Areas\Default\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Default\Views\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Default\Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
@@ -210,6 +200,10 @@
     <Content Include="Views\Shared\_html5shim.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Common\CrossCutting.Common.csproj">
+      <Project>{F70F336C-3BCC-4B61-B8C5-1850CD799999}</Project>
+      <Name>CrossCutting.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Presentation.Web.Utils\Presentation.Web.Utils.csproj">
       <Project>{B372C13B-DFBA-4012-8AB6-AD2EE7ADC787}</Project>
       <Name>Presentation.Web.Utils</Name>
@@ -234,7 +228,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51811</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51811/astromech</IISUrl>
+          <IISUrl>http://localhost:6000/astromech</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

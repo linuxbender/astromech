@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CrossCutting.Common.Constant;
 
 namespace Presentation.Web.Areas.Account.Controllers
-{      
+{   
     public class LoginController : Controller
     {
         //
@@ -19,16 +20,17 @@ namespace Presentation.Web.Areas.Account.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return RedirectToAction("SignIn");
+            return RedirectToAction(ActionConstant.SIGNUP);
         }
 
         [HttpGet]
         public ActionResult SignIn()
         {
             // Bug in the Razor View Engine in the MVC 3 - short route def - looking in the wrong view folder
-            if (!this.ControllerContext.RouteData.DataTokens.ContainsKey("area"))
+            // ToDo Review - create controller base class or decorate the mvc controller with a extenchen
+            if (!this.ControllerContext.RouteData.DataTokens.ContainsKey(StringConstant.BUG_ROUTE))
             {
-                this.ControllerContext.RouteData.DataTokens.Add("area", "Account");
+                this.ControllerContext.RouteData.DataTokens.Add(StringConstant.BUG_ROUTE, AreaConstant.ACCOUNT);
             }
             return View();
         }

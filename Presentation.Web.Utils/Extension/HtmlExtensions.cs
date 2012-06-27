@@ -22,6 +22,14 @@ namespace Presentation.Web.Utils.Extension
             }
             return new MvcHtmlString(string.Format(StringConstant.APP_NAME));
         }
+        public static MvcHtmlString AktivLink(this HtmlHelper html, string routeName = RouteConstant.HOME ,string css = StringConstant.CSS_B_ACTIVE)
+        {
+            if (html.ViewContext.RouteData.Route == RouteTable.Routes[routeName])
+            {
+                return new MvcHtmlString(css);
+            }
+            return new MvcHtmlString(String.Empty);
+        }
 
         public static MvcHtmlString AppTitle(this HtmlHelper html, string title = StringConstant.EMPTY)
         {

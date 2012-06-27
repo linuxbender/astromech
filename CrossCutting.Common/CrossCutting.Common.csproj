@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constant\ActionConstant.cs" />
+    <Compile Include="Constant\AreaConstant.cs" />
+    <Compile Include="Constant\ControllerConstant.cs" />
+    <Compile Include="Constant\RouteConstant.cs" />
     <Compile Include="Constant\StringConstant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

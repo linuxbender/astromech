@@ -1,16 +1,16 @@
 ﻿<header class="navbar">
   <nav class="navbar-inner">
     <section class="container">
-        @Html.RouteLink("Astromech", "Home", null , new { @class = "brand" })            
+        @Html.RouteLink(StringConstant.APP_NAME, RouteConstant.HOME, null , new { @class = StringConstant.CSS_B_BRAND })            
         <ul id="navMain" class="nav">
-          <li class="active">@Html.RouteLink("home","Home")</li>
-          <li class="">@Html.RouteLink("about","About")</li>
-          <li class="">@Html.RouteLink("help","Help")</li>
-          <li class="">@Html.RouteLink("contact", "Contact")</li>      
+          <li class="@Html.AktivLink()">@Html.RouteLink(StringConstant.LABEL_HOME, RouteConstant.HOME)</li>
+          <li class="@Html.AktivLink(RouteConstant.ABOUT)">@Html.RouteLink(StringConstant.LABEL_ABOUT, RouteConstant.ABOUT)</li>
+          <li class="@Html.AktivLink(RouteConstant.HELP)">@Html.RouteLink(StringConstant.LABEL_HELP, RouteConstant.HELP)</li>
+          <li class="@Html.AktivLink(RouteConstant.CONTACT)">@Html.RouteLink(StringConstant.LABEL_CONTACT, RouteConstant.CONTACT)</li>      
         </ul>
         <ul class="nav pull-right"> 
-            <li>@Html.RouteLink("Sign In", "SignIn")</li>     
-            <li><a href="github" >View On <strong>Github</strong></a></li>
+            <li>@Html.RouteLink(StringConstant.LABEL_SIGN_IN, RouteConstant.SIGNIN)</li>     
+            <li><a href="@RouteConstant.GITHUB" >@StringConstant.LABEL_VIEW_ON<strong>@StringConstant.LABEL_GITHUB</strong></a></li>
         </ul>
     </section>
   </nav>
