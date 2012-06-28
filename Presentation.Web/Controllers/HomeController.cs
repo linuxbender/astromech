@@ -36,7 +36,7 @@ namespace Presentation.Web.Controllers
         [HttpGet]
         public RedirectResult Github()
         {
-            return Redirect(StringConstant.BUG_ROUTE); 
+            return Redirect(StringConstant.URL_REPO); 
         }
     }
 }
