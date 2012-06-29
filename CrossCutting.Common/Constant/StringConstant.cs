@@ -6,6 +6,12 @@ namespace CrossCutting.Common.Constant
     {
         public const string EMPTY = "";
 
+        #region astromech Application Setting
+
+        public const string AstromechConnection = "astromech";
+
+        #endregion
+
         #region HtmlExtensions
 
         public const string APP_VD_TITEL = "AppTitle";        
